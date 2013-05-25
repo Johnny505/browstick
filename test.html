@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<a href="javascript: (function () { var s = document.createElement('script'); s.setAttribute('src', 'http://localhost/~ranbena/ranbena/browstick/bookmarklet/inject.js'); document.body.appendChild(s); }());">inject.js bookmarklet</a>
+		<br />
+		<a href="javascript: (function () { var s = document.createElement('script'); s.setAttribute('src', 'http://localhost/~ranbena/ranbena/browstick/bookmarklet/test.js'); document.body.appendChild(s); }());">test.js bookmarklet</a>
+		<div></div>
+	</body>
+
+	<script>
+		var el = document.querySelector("div");
+		window.addEventListener("keydown", function(e) {
+			el.innerHTML = e.type+" "+e.keyCode+"<br />"+el.innerHTML;
+		});
+	</script>
+</html>

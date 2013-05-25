@@ -1,0 +1,38 @@
+{
+  "name": "Browstick - play HTML5 games with your joystick!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Play HTML5 games with your joystick using Arduino",
+  "homepage_url": "http://ranbena.github.io/browstick",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Browstick"
+  },
+  "permissions": [
+    "contentSettings",
+    "notifications",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js",
+        "js/controllers/test/test.js"
+      ]
+    }
+  ]
+}
